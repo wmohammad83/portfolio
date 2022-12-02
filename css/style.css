@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --colourOne: #f5efe6;
+  --colourTwo: #e8dfca;
+  --colourThree: #aebdca;
+  --colourFour: #7895b2;
+}
+
+body {
+  background-color: var(--colourOne);
+}
+
+header {
+  color: var(--colourTwo);
+  display: flex;
+  background-color: var(--colourFour);
+  padding: 20px;
+  justify-content: space-between;
+}
+
+.right {
+  display: flex;
+}
+
+.right a {
+  padding: 10px;
+  text-decoration: none;
+  color: var(--colourTwo);
+}
+
+.right a:hover {
+  color: var(--colourThree);
+  text-decoration: underline;
+}
