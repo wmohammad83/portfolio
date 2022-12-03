@@ -1,6 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 :root {
@@ -22,6 +29,10 @@ header {
   justify-content: space-between;
 }
 
+header a {
+  font-size: 18px;
+}
+
 .right {
   display: flex;
 }
@@ -35,4 +46,172 @@ header {
 .right a:hover {
   color: var(--colourThree);
   text-decoration: underline;
+}
+
+.hero-banner {
+  background-image: url("../images/hero1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: end;
+  height: 70vh;
+}
+
+.hero-banner h2 {
+  color: var(--colourFour);
+  font-size: 30px;
+  font-weight: 700;
+  padding: 40px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 45px 0 0 0;
+}
+
+.page-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 60px;
+  color: var(--colourFour);
+  font-size: 40px;
+}
+
+
+
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  background-color: var(--colourFour);
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--colourThree);
+}
+
+footer {
+  text-align: center;
+  background-color: var(--colourFour);
+  height: 80px;
+  margin-top: 59px;
+}
+
+footer p {
+  padding: 30px;
+  color: var(--colourTwo);
+}
+
+.image-cropper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px;
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+#aboutGrid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "pic txt";
+}
+
+#me {
+  grid-area: pic;
+  background-image: url("../images/me.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 10px;
+  border: 3px solid var(--colourFour);
+}
+
+#txt {
+  grid-area: txt;
+}
+
+#projectsGrid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "p1 p1"
+    "p2 p3";
+}
+
+#horiseon {
+  grid-area: p1;
+  background-image: url("../images/HoriseonProject.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  margin: 10px;
+  border-radius: 15px;
+  transition: box-shadow 0.25;
+}
+
+#horiseon:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+#project2 {
+  grid-area: p2;
+  /* background-image: url("../images/HoriseonProject.png"); */
+  background-color: var(--colourThree);
+  margin: 10px;
+  border-radius: 15px;
+}
+
+#project2:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+#project3 {
+  grid-area: p3;
+  /* background-image: url("../images/HoriseonProject.png"); */
+  background-color: var(--colourTwo);
+  margin: 10px;
+  border-radius: 15px;
+}
+#project3:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+.icons {
+  font-size: 40px;
+  color: var(--colourFour);
+  text-align: center;
+}
+
+.icons:hover {
+  color: var(--colourThree);
 }

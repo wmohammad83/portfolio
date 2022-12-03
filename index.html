@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <link rel="stylesheet" href="./css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/2888077925.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>Waseem Mohammad</title>
   </head>
@@ -24,7 +28,7 @@
     <!-- hero banner -->
     <section class="hero-banner">
       <div>
-        <h2>Cool subtitle here!</h2>
+        <h2>Web Developer in the making!</h2>
       </div>
     </section>
 
@@ -32,23 +36,78 @@
       <!-- about me -->
       <section class="page-section" id="about">
         <h2>About Me</h2>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Excepturi
-          nesciunt ullam deserunt, quidem ad quas. Sed maiores alias voluptas
-          provident sint, pariatur quae tempora odit in libero similique quidem
-          corporis.
-        </p>
+        <div id="aboutGrid">
+          <div id="me" class="image-cropper">
+            <!-- <img src="./images/me.jpeg" class="me" /> -->
+          </div>
+          <div id="txt">
+            <p>
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Excepturi nesciunt ullam deserunt, quidem ad quas. Sed maiores
+              alias voluptas provident sint, pariatur quae tempora odit in
+              libero similique quidem corporis. Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Excepturi nesciunt ullam deserunt,
+              quidem ad quas. Sed maiores alias voluptas provident sint,
+              pariatur quae tempora odit in libero similique quidem
+              corporis.Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+              Excepturi nesciunt ullam deserunt, quidem ad quas. Sed maiores
+              alias voluptas provident sint, pariatur quae tempora odit in
+              libero similique quidem corporis.Lorem ipsum dolor sit amet
+              consectetur, adipisicing elit. Excepturi nesciunt ullam deserunt,
+              quidem ad quas. Sed maiores alias voluptas provident sint,
+              pariatur quae tempora odit in libero similique quidem corporis.
+            </p>
+          </div>
+        </div>
       </section>
 
       <!-- portfolio container -->
-      <section class="page-section" id="work">
-        <h2>Work</h2>
+      <h2 id="work">Work</h2>
+      <section class="page-section" id="projectsGrid">
+        <a
+          target="_blank"
+          href="https://wmohammad83.github.io/horiseon-module-1-challange"
+          id="horiseon"
+          class="projectsGridArea"
+        >
+          <!-- <div class="heading">Horiseon</div> -->
+        </a>
+        <div id="project2" class="projectsGridArea">
+          <div class="heading">Pre-Work Project</div>
+        </div>
+        <div id="project3" class="projectsGridArea">
+          <div class="heading">Project 3</div>
+        </div>
       </section>
 
       <!-- contact -->
       <section class="page-section contact" id="contact">
         <h2>Contact Me</h2>
+        <form class="form">
+          <div>
+            <input type="email" placeholder="Email" />
+          </div>
+          <div>
+            <textarea placeholder="Message"></textarea>
+          </div>
+          <div>
+            <button>Submit</button>
+          </div>
+        </form>
+        <div class="icons">
+          <a
+            target="_blank"
+            href="https://uk.linkedin.com/in/waseem-mohammad-a587061b2?original_referer=https%3A%2F%2Fwww.google.com%2F"
+            ><i class="fa-brands fa-linkedin icons"></i
+          ></a>
+          <a href=""><i class="fa-brands fa-instagram icons"></i></a>
+        </div>
       </section>
     </main>
+    <footer>
+      <div>
+        <p>Copyright &#169; 2022</p>
+      </div>
+    </footer>
   </body>
 </html>
