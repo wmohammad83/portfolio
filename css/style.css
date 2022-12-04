@@ -1,15 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
+/* Document reset */
 * {
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  text-decoration: none;
 }
 
 html {
   scroll-behavior: smooth;
 }
 
+/* Variables */
 :root {
   --colourOne: #f5efe6;
   --colourTwo: #e8dfca;
@@ -21,6 +24,7 @@ body {
   background-color: var(--colourOne);
 }
 
+/* header */
 header {
   color: var(--colourTwo);
   display: flex;
@@ -33,20 +37,22 @@ header a {
   font-size: 18px;
 }
 
-.right {
+.navRight {
   display: flex;
 }
 
-.right a {
+.navRight a {
   padding: 10px;
   text-decoration: none;
   color: var(--colourTwo);
 }
 
-.right a:hover {
+.navRight a:hover {
   color: var(--colourThree);
   text-decoration: underline;
 }
+
+/* Hero Section */
 
 .hero-banner {
   background-image: url("../images/hero1.jpg");
@@ -68,7 +74,8 @@ header a {
   border-radius: 45px 0 0 0;
 }
 
-.page-section {
+/* Page Section */
+.page-wrapper {
   max-width: 1200px;
   margin: 0 auto;
   margin-top: 50px;
@@ -76,13 +83,122 @@ header a {
 
 h2 {
   text-align: center;
-  margin-bottom: 60px;
+  margin: 80px;
   color: var(--colourFour);
   font-size: 40px;
 }
 
+.image-cropper {
+  width: 150px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px;
+}
 
+/* img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto; */
+/* } */
 
+#aboutGrid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 300px;
+  grid-template-columns: 20% 80%;
+  grid-template-areas: "pic txt";
+}
+
+#me {
+  grid-area: pic;
+  background-image: url("../images/me.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+  padding: 10px;
+  border: 3px solid var(--colourFour);
+}
+
+#txt {
+  grid-area: txt;
+}
+
+/* My Work */
+.projects {
+  text-decoration: none;
+}
+#projectsGrid {
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: 300px 300px;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "p1 p1"
+    "p2 p3";
+}
+
+#project1 {
+  grid-area: p1;
+  background-image: url("../images/HoriseonProject.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-size: 100%;
+  margin: 10px;
+  border-radius: 15px;
+  transition: box-shadow 0.25;
+}
+
+#project1:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+#project2 {
+  grid-area: p2;
+  background-image: url("../images/prework.png");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: var(--colourThree);
+  margin: 10px;
+  border-radius: 15px;
+}
+
+#project2:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+#project3 {
+  grid-area: p3;
+  background-image: url("../images/projectThreeDemo.jpg");
+  background-repeat: no-repeat;
+  background-position: top;
+  background-color: var(--colourTwo);
+  margin: 10px;
+  border-radius: 15px;
+}
+#project3:hover {
+  box-shadow: 0 5px 15px 5px var(--colourFour);
+}
+
+/* test */
+
+/* .text {
+  display: flex;
+  justify-content: end;
+} */
+
+a .text {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  color: white;
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 15px 15px 0 0;
+}
+
+/* Contact */
 input[type="email"],
 textarea {
   width: 100%;
@@ -109,6 +225,17 @@ button:hover {
   background-color: var(--colourThree);
 }
 
+.icons {
+  font-size: 40px;
+  color: var(--colourFour);
+  text-align: center;
+}
+
+.icons:hover {
+  color: var(--colourThree);
+}
+
+/* Footer Section */
 footer {
   text-align: center;
   background-color: var(--colourFour);
@@ -121,97 +248,61 @@ footer p {
   color: var(--colourTwo);
 }
 
-.image-cropper {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px 20px;
+/* Media queries */
+@media only screen and (max-width: 1000px) {
+  nav {
+    display: none;
+  }
 }
 
-img {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto;
-}
+@media only screen and (max-width: 600px) {
+  header {
+    justify-content: center;
+  }
 
-#aboutGrid {
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: 300px;
-  grid-template-columns: 20% 80%;
-  grid-template-areas: "pic txt";
-}
+  #aboutGrid {
+    grid-template-rows: 300px 300px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "pic"
+      "txt";
+  }
 
-#me {
-  grid-area: pic;
-  background-image: url("../images/me.jpeg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 100%;
-  padding: 10px;
-  border: 3px solid var(--colourFour);
-}
+  #projectsGrid {
+    grid-template-rows: 150px 150px 150px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "p1"
+      "p2"
+      "p3";
+  }
 
-#txt {
-  grid-area: txt;
-}
+  #me {
+    margin: 0 auto;
+  }
 
-#projectsGrid {
-  margin: 0 auto;
-  display: grid;
-  grid-template-rows: 300px 300px;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas:
-    "p1 p1"
-    "p2 p3";
-}
+  #txt {
+    margin: 0 20px;
+    text-align: center;
+    /* margin-bottom: 150px; */
+  }
 
-#horiseon {
-  grid-area: p1;
-  background-image: url("../images/HoriseonProject.png");
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: 100%;
-  margin: 10px;
-  border-radius: 15px;
-  transition: box-shadow 0.25;
-}
+  .hero-banner {
+    display: flex;
+    height: 30vh;
+    justify-content: center;
+    align-items: flex-end;
+  }
 
-#horiseon:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
-}
-
-#project2 {
-  grid-area: p2;
-  /* background-image: url("../images/HoriseonProject.png"); */
-  background-color: var(--colourThree);
-  margin: 10px;
-  border-radius: 15px;
-}
-
-#project2:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
-}
-
-#project3 {
-  grid-area: p3;
-  /* background-image: url("../images/HoriseonProject.png"); */
-  background-color: var(--colourTwo);
-  margin: 10px;
-  border-radius: 15px;
-}
-#project3:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
-}
-
-.icons {
-  font-size: 40px;
-  color: var(--colourFour);
-  text-align: center;
-}
-
-.icons:hover {
-  color: var(--colourThree);
+  .hero-banner h2 {
+    color: var(--colourFour);
+    font-size: 20px;
+    /* font-weight: 700; */
+    padding: 10px;
+    /* background-color: rgba(0, 0, 0, 0.7); */
+    border-radius: 5px 5px 5px 5px;
+  }
+  form {
+    margin: 0 10px;
+  }
 }
