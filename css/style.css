@@ -96,17 +96,10 @@ h2 {
   border-radius: 20px 20px;
 }
 
-/* img {
-  display: inline;
-  margin: 0 auto;
-  height: 100%;
-  width: auto; */
-/* } */
-
 #aboutGrid {
   margin: 0 auto;
   display: grid;
-  grid-template-rows: 300px;
+  grid-template-rows: 150px;
   grid-template-columns: 20% 80%;
   grid-template-areas: "pic txt";
 }
@@ -121,7 +114,7 @@ h2 {
   border: 3px solid var(--colourFour);
 }
 
-#txt {
+#aboutMe {
   grid-area: txt;
 }
 
@@ -180,13 +173,6 @@ h2 {
 #project3:hover {
   box-shadow: 0 5px 15px 5px var(--colourFour);
 }
-
-/* test */
-
-/* .text {
-  display: flex;
-  justify-content: end;
-} */
 
 a .text {
   display: flex;
@@ -261,7 +247,7 @@ footer p {
   }
 
   #aboutGrid {
-    grid-template-rows: 300px 300px;
+    grid-template-rows: 200px 280px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "pic"
@@ -281,7 +267,7 @@ footer p {
     margin: 0 auto;
   }
 
-  #txt {
+  #aboutMe {
     margin: 0 20px;
     text-align: center;
     /* margin-bottom: 150px; */
@@ -297,11 +283,14 @@ footer p {
   .hero-banner h2 {
     color: var(--colourFour);
     font-size: 20px;
-    /* font-weight: 700; */
     padding: 10px;
-    /* background-color: rgba(0, 0, 0, 0.7); */
     border-radius: 5px 5px 5px 5px;
   }
+
+  h2 {
+    margin: 0;
+  }
+
   form {
     margin: 0 10px;
   }
