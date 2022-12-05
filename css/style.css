@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
 
-/* Document reset */
+/* Document reset, setting the font family and removing the text decoration on a tags */
 * {
   margin: 0;
   padding: 0;
@@ -8,6 +8,7 @@
   text-decoration: none;
 }
 
+/* Smooth scroll */
 html {
   scroll-behavior: smooth;
 }
@@ -24,7 +25,13 @@ body {
   background-color: var(--colourOne);
 }
 
-/* header */
+.page-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 50px;
+}
+
+/* Header elements and classes */
 header {
   color: var(--colourTwo);
   display: flex;
@@ -36,26 +43,26 @@ header {
 header a {
   font-size: 18px;
 }
-
+/* Using flex to shift the navbar to the right */
 .navRight {
   display: flex;
 }
 
 .navRight a {
   padding: 10px;
-  text-decoration: none;
+
   color: var(--colourTwo);
 }
 
+/* Nav hover effect */
 .navRight a:hover {
   color: var(--colourThree);
   text-decoration: underline;
 }
 
 /* Hero Section */
-
 .hero-banner {
-  background-image: url("../images/hero1.jpg");
+  background-image: url("../images/hero.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
@@ -67,33 +74,18 @@ header a {
 
 .hero-banner h2 {
   color: var(--colourFour);
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 40px;
   padding: 40px;
   background-color: rgba(0, 0, 0, 0.7);
-  border-radius: 45px 0 0 0;
+  border-radius: 25px 25px 25px 25px;
 }
 
 /* Page Section */
-.page-wrapper {
-  max-width: 1200px;
-  margin: 0 auto;
-  margin-top: 50px;
-}
-
 h2 {
   text-align: center;
-  margin: 80px;
+  margin: 50px;
   color: var(--colourFour);
   font-size: 40px;
-}
-
-.image-cropper {
-  width: 150px;
-  height: 150px;
-  position: relative;
-  overflow: hidden;
-  border-radius: 20px 20px;
 }
 
 #aboutGrid {
@@ -112,16 +104,19 @@ h2 {
   background-size: 100%;
   padding: 10px;
   border: 3px solid var(--colourFour);
+  width: 175px;
+  height: 150px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px 20px;
 }
 
 #aboutMe {
   grid-area: txt;
 }
 
-/* My Work */
-.projects {
-  text-decoration: none;
-}
+/* My work section using css grid */
+
 #projectsGrid {
   margin: 0 auto;
   display: grid;
@@ -143,10 +138,6 @@ h2 {
   transition: box-shadow 0.25;
 }
 
-#project1:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
-}
-
 #project2 {
   grid-area: p2;
   background-image: url("../images/prework.png");
@@ -155,10 +146,6 @@ h2 {
   background-color: var(--colourThree);
   margin: 10px;
   border-radius: 15px;
-}
-
-#project2:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
 }
 
 #project3 {
@@ -170,28 +157,30 @@ h2 {
   margin: 10px;
   border-radius: 15px;
 }
+
+#project1:hover,
+#project2:hover,
 #project3:hover {
-  box-shadow: 0 5px 15px 5px var(--colourFour);
+  box-shadow: 0 5px 15px 5px var(--colourThree);
 }
 
 a .text {
   display: flex;
-  align-items: flex-end;
   justify-content: center;
-  color: white;
+  color: var(--colourThree);
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.7);
   border-radius: 15px 15px 0 0;
 }
 
-/* Contact */
+/* Contact me section */
 input[type="email"],
 textarea {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
+  border: 1px solid var(--colourFour);
   border-radius: 4px;
   box-sizing: border-box;
 }
@@ -225,35 +214,42 @@ button:hover {
 footer {
   text-align: center;
   background-color: var(--colourFour);
-  height: 80px;
-  margin-top: 59px;
+  height: 120px;
+  margin-top: 60px;
 }
 
 footer p {
-  padding: 30px;
+  padding: 40px;
   color: var(--colourTwo);
 }
 
-/* Media queries */
+/* Media queries to make the webpage responsive to different sizes */
+/* Media query for max width of 1000px */
 @media only screen and (max-width: 1000px) {
   nav {
     display: none;
   }
+  #aboutGrid {
+    grid-template-rows: 75px 220px;
+    grid-template-columns: 1fr 2fr;
+    grid-template-areas: "pic txt";
+  }
+  .page-wrapper {
+    margin: 0 15px;
+  }
 }
-
+/* Media query for max width of 600px */
 @media only screen and (max-width: 600px) {
   header {
     justify-content: center;
   }
-
   #aboutGrid {
-    grid-template-rows: 200px 280px;
+    grid-template-rows: 200px 500px;
     grid-template-columns: 1fr;
     grid-template-areas:
       "pic"
       "txt";
   }
-
   #projectsGrid {
     grid-template-rows: 150px 150px 150px;
     grid-template-columns: 1fr;
@@ -262,35 +258,26 @@ footer p {
       "p2"
       "p3";
   }
-
   #me {
     margin: 0 auto;
   }
-
   #aboutMe {
     margin: 0 20px;
     text-align: center;
     /* margin-bottom: 150px; */
   }
-
   .hero-banner {
     display: flex;
     height: 30vh;
     justify-content: center;
     align-items: flex-end;
   }
-
   .hero-banner h2 {
     color: var(--colourFour);
     font-size: 20px;
     padding: 10px;
     border-radius: 5px 5px 5px 5px;
   }
-
-  h2 {
-    margin: 0;
-  }
-
   form {
     margin: 0 10px;
   }
